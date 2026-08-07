@@ -24,7 +24,7 @@ permissions:
 
 jobs:
   database:
-    uses: lolmeida/github-actions/.github/workflows/database.yml@main
+    uses: lolmeida/github-actions/.github/workflows/database.yml@main # NOSONAR: adoption is pinned to @main until the GHAR v1 release
     with:
       engine: postgres
       operation: ${{ inputs.operation }}
@@ -42,4 +42,3 @@ jobs:
       aws_region: eu-central-1
       aws_role_arn: arn:aws:iam::904727092208:role/github-actions-buzz-database
       runs_on: arc-buzz-database
-    secrets: inherit
